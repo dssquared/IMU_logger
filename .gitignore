@@ -1,0 +1,5 @@
+Debug/
+Release/
+__vm/
+*.xml
+*.cppproj
