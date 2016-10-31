@@ -112,9 +112,10 @@ void loop(){
   // - VECTOR_EULER         - degrees
   // - VECTOR_LINEARACCEL   - m/s^2
   // - VECTOR_GRAVITY       - m/s^2
+  /*
   imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
 
-  /* Display the floating point data */
+  // Display the floating point data
   Serial.print("X: ");
   Serial.print(euler.x());
   Serial.print(" Y: ");
@@ -122,6 +123,22 @@ void loop(){
   Serial.print(" Z: ");
   Serial.print(euler.z());
   Serial.print("\t\t");
+  */
+  
+  // accelerometer data test
+  imu::Vector<3> acc = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+
+  // Display the floating point data
+  Serial.print("X: ");
+  Serial.print(acc.x());
+  Serial.print(" Y: ");
+  Serial.print(acc.y());
+  Serial.print(" Z: ");
+  Serial.print(acc.z());
+  Serial.print("\t\t");
+  Serial.println();
+
+
 
   /*
   // Quaternion data
